@@ -1,0 +1,13 @@
+<ol>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+
+<h5> This is a user input that uses two way binding</h5>
+<input type ="text" [(ngModel)] = "username" >
+<p> Entered Text: {{ username }}</p>
+
+<h5> This button will get enabled only when text is not empty</h5>
+<button [disabled] = "username == '' ? true : false" (click)="onClearUserName()">Clear</button>
